@@ -110,7 +110,7 @@ graph TD
 ```
 
 ## Project Setup
-
+```text
 NovusAI/
 ├── backend/
 │   └── app/
@@ -133,7 +133,7 @@ NovusAI/
 │   ├── tailwind.config.js      # Styling configuration
 │   └── vite.config.ts          # Build tool configuration
 └── .gitignore                  # Environment and dependency exclusions
-
+```
 
 ---
 
