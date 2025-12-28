@@ -60,11 +60,9 @@ NovusAI uses a **modular agent architecture**, where each agent operates indepen
 
 ```mermaid
 graph TD
-    %% Node Definitions
+    %% Nodes
     User([Client / Frontend])
     Orch[FastAPI Orchestrator]
-    Router{Agent Router}
-    Synth[Synthesis Engine]
     
     subgraph ContextLayer [Pre-Processing & Context]
         Entity[Entity Extraction]
@@ -72,6 +70,8 @@ graph TD
         State[Conversation State Manager]
         DB[(Persistent DB)]
     end
+
+    Router{Agent Router}
 
     subgraph Agents [Specialist Intelligence Layer]
         Clin[Clinical Agent]
@@ -82,7 +82,9 @@ graph TD
         Int[Internal Knowledge]
     end
 
-    %% Flow Connections
+    Synth[Synthesis Engine]
+
+    %% Flow
     User -->|Natural Language Query| Orch
     Orch --> Entity
     Entity --> Intent
@@ -97,27 +99,14 @@ graph TD
     Router --> Web
     Router --> Int
 
-    Clin & Lit & Mark & Pat & Web & Int --> Synth
+    Clin --> Synth
+    Lit --> Synth
+    Mark --> Synth
+    Pat --> Synth
+    Web --> Synth
+    Int --> Synth
+
     Synth -->|Structured JSON Response| User
-
-    %% Styling / Beauty
-    classDef userNode fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b;
-    classDef orchNode fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100;
-    classDef contextNode fill:#f3e5f5,stroke:#4a148c,stroke-width:1px;
-    classDef agentNode fill:#e8f5e9,stroke:#1b5e20,stroke-width:1px;
-    classDef routerNode fill:#ffebee,stroke:#b71c1c,stroke-width:2px;
-    classDef synthNode fill:#e0f2f1,stroke:#004d40,stroke-width:2px;
-
-    class User userNode;
-    class Orch orchNode;
-    class Entity,Intent,State,DB contextNode;
-    class Clin,Lit,Mark,Pat,Web,Int agentNode;
-    class Router routerNode;
-    class Synth synthNode;
-
-    %% Subgraph Styling
-    style ContextLayer fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
-    style Agents fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 5 5
 ```
 
 ## Project Setup
