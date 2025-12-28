@@ -256,6 +256,12 @@ npm run dev
 
 ## Screenshots 
 
+<img width="1458" height="858" alt="Screenshot 2025-12-28 211010" src="https://github.com/user-attachments/assets/e8d7228f-0b11-45d5-a327-3a782cd610c1" />
+
+<img width="1461" height="855" alt="Screenshot 2025-12-28 211116" src="https://github.com/user-attachments/assets/f0a9ecc0-3a8b-4888-9201-e8212ef14ad3" />
+
+![Uploading Screenshot 2025-12-28 213355.png…]()
+
 ## Author
 Devashish Mishra
 B.Tech | AI & Systems Engineering
