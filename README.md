@@ -256,13 +256,17 @@ npm run dev
 
 ## Screenshots 
 
+<img width="1361" height="861" alt="Screenshot 2025-12-28 211134" src="https://github.com/user-attachments/assets/b1c0ec59-754f-42e4-a149-62fd4b9ed22d" />
+
 <img width="1458" height="858" alt="Screenshot 2025-12-28 211010" src="https://github.com/user-attachments/assets/e8d7228f-0b11-45d5-a327-3a782cd610c1" />
 
 <img width="1461" height="855" alt="Screenshot 2025-12-28 211116" src="https://github.com/user-attachments/assets/f0a9ecc0-3a8b-4888-9201-e8212ef14ad3" />
 
 <img width="1470" height="837" alt="Screenshot 2025-12-28 211205" src="https://github.com/user-attachments/assets/45cdbdcd-4410-4b8a-a3ae-616445cd6b77" />
 
+<img width="1919" height="868" alt="Screenshot 2025-12-28 212641" src="https://github.com/user-attachments/assets/40f8bfab-b913-41a3-bc30-ef51de1f7141" />
 
+<img width="1512" height="852" alt="Screenshot 2025-12-28 213355" src="https://github.com/user-attachments/assets/0c24f3dc-8a7e-4567-828d-f31cf1d37157" />
 
 ## Author
 Devashish Mishra
