@@ -61,7 +61,7 @@ flowchart TB
 
 ## Agentic RAG Pipeline
 **1. Pre-Synthesis**
--- Extracts disease and drug from user query
+- Extracts disease and drug from user query
 - Builds synonym sets using:
 - https://www.ebi.ac.uk/ols4/api
 **2. Orchestration**
