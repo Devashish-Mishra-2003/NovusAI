@@ -15,7 +15,7 @@ The system supports private document ingestion, persistent sessions, and automat
 <img width="1458" height="858" alt="Screenshot 2025-12-28 211010" src="https://github.com/user-attachments/assets/13216115-553d-4995-8de4-337f330b36de" />
 <img width="1461" height="855" alt="Screenshot 2025-12-28 211116" src="https://github.com/user-attachments/assets/dc6f62c9-10b9-4d9e-8c87-b875d202c503" />
 <img width="1919" height="868" alt="Screenshot 2025-12-28 212641" src="https://github.com/user-attachments/assets/15e024f3-b012-4ee6-8d50-2a16521a5e06" />
-<img width="1470" height="837" alt="Screenshot 2025-12-28 211205" src="https://github.com/user-attachments/assets/5f64ce1f-facb-4a67-a58d-f70b324b051e" />
+<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/b4653e44-e6e9-40b1-9b62-f075ae7ef44f" />
 <img width="1512" height="852" alt="Screenshot 2025-12-28 213355" src="https://github.com/user-attachments/assets/1829f27d-689d-482c-be62-a43d241a5f7c" />
 
 ## High-Level Flow (Agentic RAG)
