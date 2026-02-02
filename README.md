@@ -60,32 +60,52 @@ flowchart TB
 ---
 
 ## Agentic RAG Pipeline
-**1. Pre-Synthesis**
-- Extracts disease and drug from user query
-- Builds synonym sets using:
-- https://www.ebi.ac.uk/ols4/api
-**2. Orchestration**
-- Dispatches enriched query to all agents in parallel
-**3. Retrieval (Agents)**
-- Patent Agent -> EPO OPS
-- Clinical Agent -> clinicaltrials.gov
-- Literature Agent -> PubMed
-- Web Intelligence Agent -> DuckDuckGo
-- Market Agent	-> Mock market data
-- Internal Knowledge Agent	-> Supabase Storage
-**4. Evidence Builder**
-- Normalizes and merges multi-source evidence
-**5. Synthesis (LLM)**
-- Uses Groq API
-- Model: llama-3.3-70b-versatile
-**6. Visualization**
-- Generates plot-ready data for:
-- Market trends
-- Treated vs untreated patients
-- Clinical study phases
-**7. Persistence**
-- Stores synthesized answers
-- Enables session continuity
+## 1. Pre-Synthesis Layer
+The entry point focuses on linguistic precision and query expansion.
+* **Entity Extraction:** Automatically isolates **Disease** and **Drug** entities from natural language queries.
+* **Synonym Expansion:** Connects to the [EBI OLS4 API](https://www.ebi.ac.uk/ols4/api) to build comprehensive synonym sets, ensuring the search covers all scientific and trade names.
+
+---
+
+## 2. Orchestration & Retrieval
+A parallelized agentic layer that queries diverse data silos simultaneously.
+
+| Agent | Source | Data Domain |
+| :--- | :--- | :--- |
+| **Patent Agent** | **EPO OPS** | Intellectual property, chemical filings, and legal status. |
+| **Clinical Agent** | **ClinicalTrials.gov** | Study phases, recruitment status, and primary endpoints. |
+| **Literature Agent** | **PubMed** | Academic journals and peer-reviewed clinical research. |
+| **Web Intel Agent** | **DuckDuckGo** | Real-time news, press releases, and market alerts. |
+| **Market Agent** | **Mock Data** | Commercial trends, pricing, and competitive landscape. |
+| **Internal Agent** | **Supabase** | Proprietary documents and historical knowledge. |
+
+---
+
+## 3. Data Processing & Synthesis
+Transforming raw, heterogeneous data into structured intelligence.
+
+### Evidence Builder
+* **Normalization:** Standardizes units, dates, and nomenclature across all 6 agents.
+* **Merging:** Deduplicates information and ranks evidence based on source credibility.
+
+### LLM Synthesis
+* **Engine:** Groq API
+* **Model:** `llama-3.3-70b-versatile`
+* **Output:** Generates high-fidelity summaries with inline citations.
+
+---
+
+## 4. Analytics & Visualization
+The system prepares JSON-ready objects for front-end rendering:
+* **Market Trends:** Historical and projected growth curves.
+* **Patient Outcomes:** Comparative bar charts (Treated vs. Untreated).
+* **Clinical Roadmap:** Pie charts or timelines showing Study Phases (I, II, III, IV).
+
+---
+
+## 5. Persistence & Continuity
+* **Storage:** Saves synthesized answers to a permanent database.
+* **Session State:** Enables "rebuild" functionality where the model remembers previous context for iterative discovery.
 
 ---
 
