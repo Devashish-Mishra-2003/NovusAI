@@ -5,14 +5,18 @@ It orchestrates multiple specialized agents to retrieve evidence from heterogene
 
 The system supports private document ingestion, persistent sessions, and automated report generation.
 
----
-
 ## Live Deployment
 
 - **Frontend (Netlify):** [Live Link](https://novusai.netlify.app/)
 - **Backend (Render):** https://novusai-backend.onrender.com
 
----
+## Screenshot
+<img width="1318" height="854" alt="Screenshot 2025-12-28 210727" src="https://github.com/user-attachments/assets/97ea795e-4bc0-40cd-ab28-427ae714122f" />
+<img width="1458" height="858" alt="Screenshot 2025-12-28 211010" src="https://github.com/user-attachments/assets/13216115-553d-4995-8de4-337f330b36de" />
+<img width="1461" height="855" alt="Screenshot 2025-12-28 211116" src="https://github.com/user-attachments/assets/dc6f62c9-10b9-4d9e-8c87-b875d202c503" />
+<img width="1919" height="868" alt="Screenshot 2025-12-28 212641" src="https://github.com/user-attachments/assets/15e024f3-b012-4ee6-8d50-2a16521a5e06" />
+<img width="1470" height="837" alt="Screenshot 2025-12-28 211205" src="https://github.com/user-attachments/assets/5f64ce1f-facb-4a67-a58d-f70b324b051e" />
+<img width="1512" height="852" alt="Screenshot 2025-12-28 213355" src="https://github.com/user-attachments/assets/1829f27d-689d-482c-be62-a43d241a5f7c" />
 
 ## High-Level Flow (Agentic RAG)
 
@@ -57,15 +61,11 @@ flowchart TB
     SYN --> DB
 ```
 
----
-
 ## Agentic RAG Pipeline
 ## 1. Pre-Synthesis Layer
 The entry point focuses on linguistic precision and query expansion.
 * **Entity Extraction:** Automatically isolates **Disease** and **Drug** entities from natural language queries.
 * **Synonym Expansion:** Connects to the [EBI OLS4 API](https://www.ebi.ac.uk/ols4/api) to build comprehensive synonym sets, ensuring the search covers all scientific and trade names.
-
----
 
 ## 2. Orchestration & Retrieval
 A parallelized agentic layer that queries diverse data silos simultaneously.
@@ -79,8 +79,6 @@ A parallelized agentic layer that queries diverse data silos simultaneously.
 | **Market Agent** | **Mock Data** | Commercial trends, pricing, and competitive landscape. |
 | **Internal Agent** | **Supabase** | Proprietary documents and historical knowledge. |
 
----
-
 ## 3. Data Processing & Synthesis
 Transforming raw, heterogeneous data into structured intelligence.
 
@@ -93,36 +91,26 @@ Transforming raw, heterogeneous data into structured intelligence.
 * **Model:** `llama-3.3-70b-versatile`
 * **Output:** Generates high-fidelity summaries with inline citations.
 
----
-
 ## 4. Analytics & Visualization
 The system prepares JSON-ready objects for front-end rendering:
 * **Market Trends:** Historical and projected growth curves.
 * **Patient Outcomes:** Comparative bar charts (Treated vs. Untreated).
 * **Clinical Roadmap:** Pie charts or timelines showing Study Phases (I, II, III, IV).
 
----
-
 ## 5. Persistence & Continuity
 * **Storage:** Saves synthesized answers to a permanent database.
 * **Session State:** Enables "rebuild" functionality where the model remembers previous context for iterative discovery.
-
----
 
 ## Private Knowledge Vault (Admin Only)
 - File types: .pdf, .txt
 - Storage: Supabase (company_docs bucket)
 - Used by Internal Knowledge Agent
 
----
-
 ## Authentication
 - JWT-based
 Roles:
 - admin → upload documents
 - employee → query only
-
----
 
 ## Tech Stack
 ### Backend
@@ -142,8 +130,6 @@ Roles:
 - Backend → Render
 - Frontend → Netlify
 
----
-
 ## Local Setup
 ### Backend
 ```bash
@@ -158,8 +144,6 @@ cd frontend
 npm install
 npm run dev
 ```
-
----
 
 ## Environment Variables (Backend)
 ```bash
@@ -182,16 +166,12 @@ CONSUMER_SECRET=xxxxxxxxxx
 VITE_API_BASE_URL=https://<backend-url>
 ```
 
----
-
 ## Repository Structure
 ```bash
 NovusAI/
   backend/
   frontend/
 ```
-
----
 
 ## Author
 Devashish Mishra
