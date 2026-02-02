@@ -1,7 +1,13 @@
 # NovusAI – Advanced Agentic RAG for Drug Repurposing
 
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![React](https://img.shields.io/badge/react-%2320232d.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Groq](https://img.shields.io/badge/Groq-Llama3.3-orange?style=for-the-badge)
+
 NovusAI is an **advanced Agentic RAG (Retrieval-Augmented Generation)** system for drug repurposing and biomedical intelligence.  
 It orchestrates multiple specialized agents to retrieve evidence from heterogeneous biomedical sources, synthesize insights using a large language model, and generate structured answers with visual analytics.
+
+Unlike traditional RAG, NovusAI uses an agentic orchestration layer where each retriever is an autonomous agent operating on domain-specific sources. Evidence is merged and ranked before synthesis, enabling explainable, multi-hop biomedical reasoning.
 
 The system supports private document ingestion, persistent sessions, and automated report generation.
 
@@ -11,12 +17,43 @@ The system supports private document ingestion, persistent sessions, and automat
 - **Backend (Render):** https://novusai-backend.onrender.com
 
 ## Screenshot
-<img width="1318" height="854" alt="Screenshot 2025-12-28 210727" src="https://github.com/user-attachments/assets/97ea795e-4bc0-40cd-ab28-427ae714122f" />
-<img width="1458" height="858" alt="Screenshot 2025-12-28 211010" src="https://github.com/user-attachments/assets/13216115-553d-4995-8de4-337f330b36de" />
-<img width="1461" height="855" alt="Screenshot 2025-12-28 211116" src="https://github.com/user-attachments/assets/dc6f62c9-10b9-4d9e-8c87-b875d202c503" />
-<img width="1919" height="868" alt="Screenshot 2025-12-28 212641" src="https://github.com/user-attachments/assets/15e024f3-b012-4ee6-8d50-2a16521a5e06" />
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/b4653e44-e6e9-40b1-9b62-f075ae7ef44f" />
-<img width="1512" height="852" alt="Screenshot 2025-12-28 213355" src="https://github.com/user-attachments/assets/1829f27d-689d-482c-be62-a43d241a5f7c" />
+## 📸 Product Interface
+
+<table border="0">
+  <tr>
+    <td>
+      <p align="center"><b>Main Intelligence Dashboard</b></p>
+      <img src="https://github.com/user-attachments/assets/97ea795e-4bc0-40cd-ab28-427ae714122f" width="100%" />
+    </td>
+    <td>
+      <p align="center"><b>Agentic Orchestration View</b></p>
+      <img src="https://github.com/user-attachments/assets/13216115-553d-4995-8de4-337f330b36de" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center"><b>Clinical Trial Analytics</b></p>
+      <img src="https://github.com/user-attachments/assets/dc6f62c9-10b9-4d9e-8c87-b875d202c503" width="100%" />
+    </td>
+    <td>
+      <p align="center"><b>Market Trends & Visualization</b></p>
+      <img src="https://github.com/user-attachments/assets/15e024f3-b012-4ee6-8d50-2a16521a5e06" width="100%" />
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary>📂 <b>View Additional Modules (Knowledge Vault & PDF Reports)</b></summary>
+
+### Private Knowledge Vault
+The secure admin interface for document ingestion and vectorization.
+<img src="https://github.com/user-attachments/assets/b4653e44-e6e9-40b1-9b62-f075ae7ef44f" width="100%" />
+
+### Automated Synthesis Report
+Generated high-fidelity biomedical summary with inline citations.
+<img src="https://github.com/user-attachments/assets/1829f27d-689d-482c-be62-a43d241a5f7c" width="100%" />
+
+</details>
 
 ## High-Level Flow (Agentic RAG)
 
