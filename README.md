@@ -19,33 +19,38 @@ The system supports private document ingestion, persistent sessions, and automat
 ```mermaid
 flowchart TB
     U[User Query]
-    PS[Pre-Synthesis\n(Intent + Synonyms)]
+    PS[Pre Synthesis]
     ORCH[Orchestration Layer]
-    PAT[Patent Agent\n(EPO OPS)]
-    CLIN[Clinical Agent\n(clinicaltrials.gov)]
-    LIT[Literature Agent\n(PubMed)]
-    WEB[Web Intelligence Agent\n(DuckDuckGo)]
-    MKT[Market Agent\n(Mock Data)]
-    INT[Internal Knowledge Agent\n(Supabase Docs)]
+
+    PAT[Patent Agent - EPO OPS]
+    CLIN[Clinical Agent - ClinicalTrials]
+    LIT[Literature Agent - PubMed]
+    WEB[Web Intelligence - DuckDuckGo]
+    MKT[Market Agent]
+    INT[Internal Knowledge - Supabase]
+
     EVID[Evidence Builder]
-    SYN[Synthesis Agent\n(Groq – llama-3.1-8b-instant)]
+    SYN[Synthesis Agent - Groq Llama 3.1]
     VIS[Visualization Agent]
     PDF[PDF Agent]
-    DB[(Session DB)]
+    DB[(Session Database)]
 
     U --> PS --> ORCH
+
     ORCH --> PAT
     ORCH --> CLIN
     ORCH --> LIT
     ORCH --> WEB
     ORCH --> MKT
     ORCH --> INT
+
     PAT --> EVID
     CLIN --> EVID
     LIT --> EVID
     WEB --> EVID
     MKT --> EVID
     INT --> EVID
+
     EVID --> SYN
     SYN --> VIS
     VIS --> PDF
