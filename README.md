@@ -60,30 +60,30 @@ flowchart TB
 ---
 
 ## Agentic RAG Pipeline
-1. Pre-Synthesis
-- Extracts disease and drug from user query
+**1. Pre-Synthesis**
+-- Extracts disease and drug from user query
 - Builds synonym sets using:
 - https://www.ebi.ac.uk/ols4/api
-2. Orchestration
+**2. Orchestration**
 - Dispatches enriched query to all agents in parallel
-3. Retrieval (Agents)
+**3. Retrieval (Agents)**
 - Patent Agent -> EPO OPS
 - Clinical Agent -> clinicaltrials.gov
 - Literature Agent -> PubMed
 - Web Intelligence Agent -> DuckDuckGo
 - Market Agent	-> Mock market data
 - Internal Knowledge Agent	-> Supabase Storage
-4. Evidence Builder
+**4. Evidence Builder**
 - Normalizes and merges multi-source evidence
-5. Synthesis (LLM)
+**5. Synthesis (LLM)**
 - Uses Groq API
-- Model: llama-3.1-8b-instant
-6. Visualization
+- Model: llama-3.3-70b-versatile
+**6. Visualization**
 - Generates plot-ready data for:
 - Market trends
 - Treated vs untreated patients
 - Clinical study phases
-7. Persistence
+**7. Persistence**
 - Stores synthesized answers
 - Enables session continuity
 
